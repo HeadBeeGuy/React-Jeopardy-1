@@ -2,7 +2,7 @@ import Category from './Category'
 
 function JeopardyGame(props) {
   const categories = props.data.map((category) => 
-    <Category data={category} />
+    <Category data={category} key={category.keyprefix} />
   )
 
   return (

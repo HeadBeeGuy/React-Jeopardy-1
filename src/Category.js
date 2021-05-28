@@ -4,7 +4,7 @@ function Category(props) {
   const data = props.data
 
   const questions = data.questions.map((question) => 
-    <QuestionBlock value={question.value} keyprefix={data.keyprefix} />
+    <QuestionBlock value={question.value} question={question.question}  key={data.keyprefix + question.value} />
   )
   return (
     <div className="category-section">
