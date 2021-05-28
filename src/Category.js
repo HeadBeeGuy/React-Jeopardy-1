@@ -1,11 +1,10 @@
+import QuestionBlock from './QuestionBlock'
 
 function Category(props) {
   const data = props.data
 
   const questions = data.questions.map((question) => 
-    <li key={question.value} className="question-block">
-      <span className="question-value">${question.value}</span>
-    </li>
+    <QuestionBlock value={question.value} keyprefix={data.keyprefix} />
   )
   return (
     <div className="category-section">
