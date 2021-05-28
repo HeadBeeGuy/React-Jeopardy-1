@@ -1,5 +1,5 @@
 import './App.css';
-import Category from './Category';
+import JeopardyGame from './JeopardyGame';
 
 function App() {
   const questionData = [
@@ -78,14 +78,35 @@ function App() {
         },
       ],
     },
+    {
+      "title": "Drummers Named Ringo",
+      "questions": [
+        {
+          "value": 200,
+          "question": "How many were going to St Ives?",
+          "answer": "Just the one guy, right?"
+        },
+        {
+          "value": 300,
+          "question": "What's the sixth guitar string tuned at in standard tuning?",
+          "answer": "That would be E."
+        },
+        {
+          "value": 400,
+          "question": "What's the pithy nickname for the creator of Ruby?",
+          "answer": "Matz."
+        },
+        {
+          "value": 500,
+          "question": "Who wrote Great Expectations?",
+          "answer": "Charles Dickens."
+        },
+      ],
+    },
   ]
   return (
     <div className="App">
-      <div className="question-board">
-        <Category data={questionData[0]} />
-        <Category data={questionData[1]} />
-        <Category data={questionData[2]} />
-      </div>
+      <JeopardyGame data={questionData} />
     </div>
   );
 }

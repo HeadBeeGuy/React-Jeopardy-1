@@ -29,6 +29,9 @@ body {
 header h1 {
   text-align: center;
   padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 3px black;
 }
 
 .question-board {
@@ -39,9 +42,18 @@ header h1 {
 }
 
 .category-section {
-  width: 20rem;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.category-name {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  min-height: 4rem;
+  margin: 0.8rem 0;
+  text-shadow: 2px 2px 3px black;
 }
 
 ul, ol {

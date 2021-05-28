@@ -9,7 +9,7 @@ function Category(props) {
   )
   return (
     <div className="category-section">
-      <h3>{data.title}</h3>
+      <h3 className="category-name">{data.title}</h3>
       <ol>
         {questions}
       </ol>
