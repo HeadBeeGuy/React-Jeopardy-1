@@ -14,10 +14,6 @@ class QuestionBlock extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
-  // handleClick() {
-  //   this.setState(state => ({answered: !this.state.answered}))
-  // }
-
   handleOpenModal() {
     this.setState({showModal: true})
   }
@@ -28,20 +24,15 @@ class QuestionBlock extends Component {
 
   render() {
     return (
-      <li className="question-block" onClick={this.handleOpenModal} >
-        <span className="question-value" >${this.props.value}</span>
+      <div className="question-block">
+        <span className="question-value" onClick={this.handleOpenModal} >${this.props.value}</span>
         <ReactModal
           isOpen={this.state.showModal}
+          onRequestClose={this.handleCloseModal}
         >
           <button onClick={this.handleCloseModal}>Close modal</button>
         </ReactModal>
-      </li>
-      // <li className="question-block" onClick={this.handleClick} >
-      //   { !this.state.answered ? 
-      //     <span className="question-value" >${this.props.value}</span> :
-      //     <span className="question-text">{this.props.question}</span>
-      //   } 
-      // </li>
+      </div>
     )
   }
 }
